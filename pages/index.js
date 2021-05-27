@@ -5,7 +5,7 @@ import { Links } from "../conponents/Links";
 import styles from "../styles/Home.module.css";
 import { Headline } from "./Headline";
 
-export function Home() {
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
