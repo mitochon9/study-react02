@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "../components/Headline.module.css";
+import styles from "./Headline.module.css";
 
 export function Headline(props) {
   return (
@@ -7,7 +7,7 @@ export function Headline(props) {
       <h1 className={styles.title}>{props.page} Page</h1>
 
       <p className={styles.description}>
-        Get started by editing{props.children}
+        Get started by editing {props.children}
       </p>
       <button className={styles.button} onClick={props.onClick}>
         ボタン

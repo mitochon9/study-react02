@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Footer } from "../components/footer";
-import { Main } from "../components/Main";
 import styles from "../styles/Home.module.css";
+import { Main } from "../components/Main";
+import { Footer } from "../components/Footer";
 
 export default function Home() {
   return (
