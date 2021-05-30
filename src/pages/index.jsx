@@ -31,9 +31,7 @@ export default function Home() {
 
       <Header />
       <h1>{count}</h1>
-      <button href="/about" onClick={handleClick}>
-        ボタン
-      </button>
+      <button onClick={handleClick}>ボタン</button>
       <Main page="index" />
       <Footer />
     </div>
