@@ -17,7 +17,7 @@
 }
 
 .anchor:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px) rotate(360deg);
   box-shadow: 4px 4px #333;
 }
 
