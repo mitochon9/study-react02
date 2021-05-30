@@ -3,15 +3,19 @@ import Image from "next/image";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 import { Main } from "src/components/Main";
-import { useBgLightBlue } from "src/hooks/useBgLightBlue";
-import { useCounter } from "src/hooks/useCounter";
-import { useInputArray } from "src/hooks/useInputArray";
 import styles from "src/styles/Home.module.css";
 
-export default function About() {
-  const { count, isShow, handleClick, handleDisplay } = useCounter();
-  const { text, array, handleChange, handleAdd } = useInputArray();
-  useBgLightBlue();
+export default function About(props) {
+  const {
+    count,
+    isShow,
+    handleClick,
+    handleDisplay,
+    text,
+    array,
+    handleChange,
+    handleAdd,
+  } = props;
 
   return (
     <div className={styles.container}>
@@ -27,11 +31,11 @@ export default function About() {
 
       <input type="text" value={text} onChange={handleChange} />
       <button onClick={handleAdd}>追加</button>
-      <ul>
+      <ol>
         {array.map((item) => {
           return <li key={item}>{item}</li>;
         })}
-      </ul>
+      </ol>
 
       <Main page="about" />
       <Footer />
