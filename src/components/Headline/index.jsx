@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "src/components/Headline/Headline.module.css";
 
-export function Headline(props) {
+export const Headlin = (props) => {
   return (
     <div>
       <h1 className={styles.title}>{props.page} Page</h1>
@@ -19,4 +19,4 @@ export function Headline(props) {
       </button> */}
     </div>
   );
-}
+};
