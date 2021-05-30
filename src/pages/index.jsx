@@ -1,13 +1,22 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 import { Main } from "src/components/Main";
 import styles from "src/styles/Home.module.css";
 
 export default function Home() {
+  useEffect(() => {
+    console.log("マウント時");
+    document.body.style.backgroundColor = "lightblue";
+    return () => {
+      console.log("アンマウント時");
+      document.body.style.backgroundColor = "";
+    };
+  }, []);
+
   const foo = 1;
 
   const handleClick = useCallback((e) => {
