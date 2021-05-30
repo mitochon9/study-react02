@@ -17,5 +17,11 @@
 }
 
 .anchor:hover {
-  transform: rotate(360deg);
+  transform: translateY(-4px);
+  box-shadow: 4px 4px #333;
+}
+
+.anchor:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
