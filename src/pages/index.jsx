@@ -1,29 +1,26 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect } from "react";
 import { Footer } from "src/components/Footer";
 import { Header } from "src/components/Header";
 import { Main } from "src/components/Main";
 import styles from "src/styles/Home.module.css";
 
 export default function Home() {
+  const [count, setCount] = useState(1);
+
+  const handleClick = (e) => {
+    setCount((count) => count + 1);
+  };
+
   useEffect(() => {
-    console.log("マウント時");
     document.body.style.backgroundColor = "lightblue";
     return () => {
-      console.log("アンマウント時");
       document.body.style.backgroundColor = "";
     };
   }, []);
 
-  const foo = 1;
-
-  const handleClick = useCallback((e) => {
-    console.log(e.target.href);
-    e.preventDefault();
-    alert(foo);
-  }, []);
+  console.log(count);
 
   return (
     <div className={styles.container}>
@@ -33,11 +30,10 @@ export default function Home() {
       </Head>
 
       <Header />
-      {/* <Link> */}
-      <a href="/about" onClick={handleClick}>
+      <h1>{count}</h1>
+      <button href="/about" onClick={handleClick}>
         ボタン
-      </a>
-      {/* </Link> */}
+      </button>
       <Main page="index" />
       <Footer />
     </div>
