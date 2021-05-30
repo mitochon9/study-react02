@@ -9,9 +9,9 @@ export function Headline(props) {
       <p className={styles.description}>
         Get started by editing {props.children}
       </p>
-      <button className={styles.button} onClick={props.onClick}>
+      {/* <button className={styles.button} onClick={props.onClick}>
         ボタン
-      </button>
+      </button> */}
     </div>
   );
 }
