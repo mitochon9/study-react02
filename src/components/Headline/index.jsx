@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "src/components/Headline/Headline.module.css";
 
-export const Headlin = (props) => {
+export const Headline = (props) => {
   return (
     <div>
       <h1 className={styles.title}>{props.page} Page</h1>
